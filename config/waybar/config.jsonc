@@ -1,0 +1,50 @@
+{
+  "layer": "top",
+  "position": "top",
+  "modules-left": ["hostname"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": [
+    "network",
+    "battery",
+    "custom/media",
+    "clock"
+  ],
+
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "on-click": "activate"
+  },
+
+  "hostname": {
+    "format": "{hostname}"
+  },
+
+  "network": {
+    "format": " {essid} ({signalStrength}%)",
+    "format-disconnected": "󰖪 Disconnected",
+    "tooltip": true
+  },
+
+  "battery": {
+    "format": "󰁹 {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-plugged": "󰚥 {capacity}%",
+    "tooltip": true
+  },
+
+  "custom/media": {
+    "format": "{}",
+    "return-type": "json",
+    "exec": "~/.config/waybar/scripts/mediaplayer.py",
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous",
+    "interval": 2
+  },
+
+  "clock": {
+    "format": " {:%a, %b %d  %I:%M %p}",
+    "tooltip": false,
+    "on-click": "gnome-calendar"  // or `yad`, `gsimplecal`, etc.
+  }
+}

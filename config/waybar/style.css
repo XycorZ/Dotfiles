@@ -1,0 +1,25 @@
+@import url("file:///home/YOUR_USERNAME/.cache/wal/colors.css");
+
+* {
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 13px;
+  background-color: var(--background);
+  color: var(--foreground);
+  border: none;
+  border-radius: 0;
+}
+
+#workspaces button {
+  background-color: var(--color1);
+  color: var(--background);
+  border-radius: 5px;
+  margin: 3px;
+}
+
+#clock, #battery, #network, #bluetooth, #custom-media {
+  background-color: var(--color0);
+  color: var(--foreground);
+  margin: 4px 0;
+  padding: 6px 8px;
+  border-radius: 8px;
+}
